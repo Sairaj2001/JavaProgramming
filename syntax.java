@@ -5,8 +5,7 @@ public class examples{
     int x = 1;
     int y = 2;
     
-    /* 1. Conditional Statements */ 
-    
+    // if loop   
     if ( x > y){
       System.out.println("Oh");
     }else if (){
@@ -15,12 +14,17 @@ public class examples{
       y++;
     }
   
+    // while infinite loop
+    while (num < 2){
+      int num = console.nextInt();
+      System.out.println(num);
+    }
+    
     // string uses "equals" method and char uses <, >=, == ...
     string str = "abcde";
     char c = 'A';
     
     // Useful methods of the Chracter class
-  
     System.out.println(isDigit(c));
     System.out.println(isLetter(c));
     System.out.println(isLowerCase(c));
@@ -34,7 +38,6 @@ public class examples{
     // Conditional Execution
     // pre: n =0
     // post: returns n factorial (n!)
-    
       public static int factorial(int n){
         if ( n < 0 ){
           throw new IllegalArgumentException("negative n:" + n);

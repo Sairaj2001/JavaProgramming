@@ -1,5 +1,5 @@
-# JavaProgramming
-- A quick warm-up for Java syntax and data structures
+# Java Programming
+- A quick brain warm-up for Java syntax and data structures
 
 ## Basic Background
 ### Java Virtual Machine, JVM

@@ -26,7 +26,8 @@ public class examples{
       return (x == y); // don't need to have two return statements - true and false
     }
     
-    
+
+    /************************************************** Utilities **************************************************/
     // string uses "equals" method and char uses <, >=, == ...
     string str = "abcde";
     char c = 'A';

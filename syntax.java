@@ -4,11 +4,12 @@ public class examples{
   public static main(String[] args){
     int x = 1;
     int y = 2;
+    boolean smart = (x > 4); // false, true ....
     
     // if loop   
     if ( x > y){
       System.out.println("Oh");
-    }else if (){
+    }else if (x == y){
       x++;
     }else{
       y++;
@@ -19,6 +20,12 @@ public class examples{
       int num = console.nextInt();
       System.out.println(num);
     }
+    
+    // how to wrtie a good boolean function
+    public static boolean isXYsame(int x, int y){
+      return (x == y); // don't need to have two return statements - true and false
+    }
+    
     
     // string uses "equals" method and char uses <, >=, == ...
     string str = "abcde";
@@ -32,7 +39,6 @@ public class examples{
     System.out.println(toLowerCase(c));
     System.out.println(toUpperCase(c));
     
-    // printf
     System.out.printf("x value is %d", x);
     
     // Conditional Execution

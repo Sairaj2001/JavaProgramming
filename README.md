@@ -1,5 +1,6 @@
 # Java Programming
 - A quick brain warm-up for Java syntax and data structures
+- Reference: "Building Java Programs - A BACK TO BASICS APPROACH" by Stuart Reges and Marty Stepp
 
 ## Basic Background
 ### Java Virtual Machine, JVM

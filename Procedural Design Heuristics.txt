@@ -1,0 +1,25 @@
+Procedural Design Heuristics Guidelines
+
+1. Each method should have a coherent set of responsibilities
+  - Cohesion is a desirable quality in which the reponsibilites of a method or porcess are closely related to each other
+  - Summarize each of methods in a single sentence such as "The purpose of this method is to ..."
+
+2. No one method should do too large a share of the overall task
+
+3. Coupling and dependencies between methods should be minimized
+  - Coupling is an undesirable state in which two methods or porcesses rigidly depend on each other
+  - Methods are coupled if one can't easily be called without the other
+  - If a piece of data could be computed or gathered inside the method, or if the data isn't used by the method, it should not be declared as a parameter to the method
+  - Use "Return" statements to send information back to the caller
+  
+4. The "main" method should be a concise summary of the overall program
+  - Avoid chaining
+    - Chaining is an undesirable design in which a "chain" of several methods call each other without returning the overall flow control to "main"
+  - A program suffers from chaining if the end of each method simply calls the next method
+  
+5. Data should be "owned" at the lowest level possible
+  1) The "main" method should avoid performing low-level tasks as much as possible
+      - For example, in an interactive porgram, "main" should not read the majority of the user input or contain lots of println statements
+  2) Variables should be declared and initailzied in the narrowest possible scope.
+      - A poor design is for "main" to read all of the input, perform heavy computations, and then pass the resulting data as parameters to the various low-level methods
+        - A better design uses low-level methods to read and process the data, and return data to main only if they are needed by a later subtask in the program

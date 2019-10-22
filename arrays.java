@@ -59,8 +59,12 @@ public class ArrayExamples{
     /* Arrays of Objects */
     Point[] points = new Point[3]; // used for storing the (x,y) coordinates of a point in two-dimensional space
     points[0] = new Point(3,7);
-    points[0] = new Point(4,5);
-    points[0] = new Point(6,2);
+    points[1] = new Point(4,5);
+    points[2] = new Point(6,2);
+    
+    points[1].translate(-1,-2); // subtract 1 from x and 2 from y
+    // setLocations(x,y) // sets the coordinates to the given values
+    // distance(p2) // returns the distance from this point to p2
     
   }
   

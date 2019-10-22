@@ -94,3 +94,55 @@ abstact, assert, boolean, break, byte, case, catch, char, class, const, continue
 
 #### Flow of Control
 - The order in which the statements ofa Java program are executed
+
+### 5. Managing Complexity
+1. Scope
+- The part of a program in which a particular delcaration is valid
+    - find the pair of curly braces that idrectly encloses the variable declaration
+    - Ask yourslef what it means for difference methods
+2. Local Variable
+- A vraible declared inside a method that is accessible only in that method
+3. Class constant
+- A named value that cannot be changed
+    -example)
+        -`final int LINEDS = 5;`
+        -`public stattic final int HEIGHT = 10;`
+            - Static methods to be able to access your constants
+ ### 6. Parameters
+ 1. Formal parameter
+ - A variable that appears inside parentheses in the header of a method that is used to generalize the method's behaviour
+ - doesn't describe its purpose
+ - example) `pbulic static void doubleNumber(int number){...}`
+ 2. Actual parameter
+ - A specific value or expression that appears inside parentheses in a method call
+ 
+ ### 7. Objects
+ - A programming entity that contains state (data) and behaviour (methods)
+ - syntax) <variables>.<method name>(<expression>, <expression>, ..., <expression>)
+
+#### Useful Methods of String Objects
+| Method | Description |
+| --- | --- |
+| charAt(index) | character at a specific index |
+| endsWith(text) | wehter or not the string ends with some text |
+| indexOf(text) | index of a particualr character or string | 
+| length() | number of characters in the string
+| startWith(text) | whether or not the string starts with some text
+| substring(start, stop) | characters from start index to just before stop index
+| toLowerCase() | a new string with all lowercase letters
+| toUpperCase() | a new string with all uppercase letters
+
+#### Constructor
+- a method taht creates and initailizes an object. Objects in JAva programs must be constructed before they can be used
+- example) `Scanner console = new Scanner(system.in);`
+
+#### Scanner Methods (to keep track of the values returned by methods)
+| Method | Description |
+| --- | --- |
+| next() | reads and returns the next token as a string |
+| nextDouble() | reads and returns a double value |
+| nextInt() | reads and returns an int value |
+| nextLine() | reads and returns the next line of input as a string |
+
+### 8. Token
+- A single element of input (e.g., one word, one number)

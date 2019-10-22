@@ -1,0 +1,30 @@
+Analogy
+-------------------------------------------------------------------------------------------------------------------------
+You want to put up a fence that is 100 yeards long, and you want to install a post every 10 yards. 
+How many posts do you need? 
+If you do a quick division in your head, you might think that you need 10 posts, but actuall you need 11 posts.
+-------------------------------------------------------------------------------------------------------------------------
+
+Applying this analogy to programming...
+-------------------------------------------------------------------------------------------------------------------------
+for (length of the fence){
+  plant a post
+  attach some wire
+}
+-------------------------------------------------------------------------------------------------------------------------
+this is bad, because you need the last one post. A better solution may be..
+-------------------------------------------------------------------------------------------------------------------------
+plant a post
+for (length of the fence){
+  attach some wire
+  plant a post
+}
+
+OR
+
+for (lenth of the fence){
+  plant a post
+  if (this post is not the last post){
+    attach some wire
+  }
+}

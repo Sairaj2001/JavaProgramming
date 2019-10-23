@@ -1,0 +1,114 @@
+Coolection is an object that stores a group of other objects, called its elements
+
+<Some examples>
+1) List = an ordered collection of elements, often accessed by integer indexes or by iteration (accessed sequentially)
+    - ArrayList
+        - can be slow when removing an element due to shifting of other elements in reponse
+        - can be slow or inefficient for waiting, due to new elements being added to the rear
+    - LinkedList = A collection taht stores a list of elements in samll object containers called "nodes", which are linked together
+    - In summary
+        - ArrayList is a good choice when:
+            1) Random access: any element needs to be accessed quickly
+            2) Adding and removing at the end of the list
+        - LinkedList is a good choice when:
+            1) Adding and removing at either the beginning or end of the list
+            2) Adding and removing during a sequential access with an iterator
+            3) No need to expand when full
+            4) Can be more easily used as a queue than arrays
+2) Stack = A collection in which the last element added is the first one to be removed, LIFO (Last-In-First-Out)
+3) Queue = A collection in which elemtns are removed in the same order in which they were added, FIFO (First-In-First-Out)
+4) Set = A collection of elements thatis guaranteed to contain no duplicates
+5) Map = A collection of key/value pairs in which each key is associated with a corresponding value
+
+< Useufl Methods of the Collection Interface >
+1) add(element)
+2) addAll(collection)
+3) clear()
+4) contains(element)
+5) containsAll(collection)
+6) isEmpty()
+7) iterator() - returns an object that can be used to traverse the elements of this collection
+    - Iterator is an object that sllows the efficient retrieval of the elemtns of a list in sequential order
+        - useful when accessing an array or list of a large size
+            - when moving from one element to the next, going back to the beginning of the list at each call is avoided
+       - Iterators are central to the Java Collections Framework
+       - syntax) 
+              Iterator<E> itr = <listname>.iterator();
+              while (itr.hasNext()){ ... }
+       - Methods of Iterator Objects
+            1. next() - returns the next element from the list and advances the position of the iterator by one
+            2. remove() - removes the element most recently returned by next()
+            3. hasNext() - returns true if there are more elements to be examined    
+       - "for each", for( string word: list){ ... } used to access ArrayList also uses iterator under the hood.
+8) remove(element) - removes one occurence of the specified element, if it is contained in this collection
+9) removeAll(collection) - removes all elements of the given collection from this collection
+10) retainAll(collection) - removes all elements not found in the given collection from this collection
+11) size()
+12) toArray() - returns an array ocntaining the elements of this collection
+
+< Abstract Data Type >
+- ADT is a specification of a type of data and the operations that can be perfromed on it
+- Each ADT's operations are specified by the methods of its interface
+    - example) Both LinkedList and ArrayList implement an interface in the "java.util" package called "List"
+        - example) List<E> list = new LinkedList<E>();
+- Useful static methods of the Collections class
+    1) binaraySearch(list, value) - searches a sorted list for a given element value and returns its index
+    2) copy(destinationList, sourceList)
+    3) fill(list, value)
+    4) max(list)
+    5) min(list)
+    6) replaceAll(list, oldValue, newVlaue)
+    7) reverse(list)
+    8) rotate(list, distance)
+    9) shuffle(list)
+    10) sort(list)
+    11) swap(list, index1, index2)
+  
+< Sets >
+A collection that can't contain duplicates
+- two primary implementations
+    1. HashSet - general purpose
+        - can be serached fast
+        - implemented using a hash table
+        - store elements in an unpredictable order
+            - not accessible by indexes, but accessible with "Iterator"
+              - example) 
+                    Set<String> words = new HashSet<E>();
+                    Iterator<string> itr = words.iterator();
+                    while(itr.hasNext()){ ... }
+    2. TreeSet - more advanced than HashSet
+        - uses an ineternal linked data structure, "binary search tree", to store its elements insorted order
+        - must be used with elements that can be compared such as Integer and String
+- Common Set Operations
+    1. addAll - set of all elements taht are in A,B, or both
+    2. retainAll - set of all elements that are in both A and B
+    3. removeAll - set of all elements that are in A, but not in B
+    4. containAll - returns true if A is a superset(contains all elements of) of B
+    
+< Maps >
+- Map is a collection that associates objects called keys with objects called values
+- Two primary implementations
+    1. HashMap - more general purpose
+        - example) Map<E, E> salaryMap = new HashMap<E, E>();
+    2. TreMap - stores comparable keys in sorted order
+        - example) Map<E, E> salaryMap = new TreeMap<E, E>(); 
+- Useful methods of Maps
+    1. clear() - removes all keys and values from a map
+    2. containKey(key)
+    3. containValue(value)
+    4. get(key) - returns the value associated with this key, or null if not found
+    5. isEmpty()
+    6. keySet() - returns a set of all keys in this map
+    7. put(key,value) - associates the given key with the given value
+    8. putAll(map)
+    9. remove(key) - removes the given key and its associated value from this map
+    10. size()
+    11. values() - returns a Collection of all values in this map
+
+
+
+
+
+
+
+

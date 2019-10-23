@@ -1,0 +1,71 @@
+<Object-Oriented Programming> 
+OOP is reasoning about a program as a set of objects rather than as a set of actions 
+  1. Object is a programming entity that contains state (data) and behaviour (methods) 
+    - It provides reusable pieces of code that can be used in many client programs
+  2. State is a set of values (internal data) stored in an object 
+  3. Client (or Client Code) is a code that interacts with a class or objects of that class
+  
+< Object State and Behaviour >
+Four major main components are Fields, Methods, Constructors and Encapsulation
+  1. Fields = the data stored in each object / A variable inside an object that makes up part of its interanl state
+    - declared inside { }
+  2. Methods = the behaviour each object can execute
+      1) Mutator is an instance method that modifies the object's internal state
+      2) Accessor is an instance method that provides information about thte state of an object without modifying it
+  3. Contructors = Code that initalizes an object as it is being constructed with the "new" keyword
+      1) An implicit parameter is the object that is referenced during an instance method call
+        - It is set each time an instance or method is called
+        - "this" is a Java keyword that allows you to refer to the implicit parameter inside a class
+  4. Encapsulation = Hiding the implementation details of an object from the clients of the object
+      1) Private fields
+  5. Abstraction = focues on essential properties rather than inner details
+      - Naming a class or method indicates what it does
+  6. Inheritance ("extends") and Interfaces ("implements")
+      1) Superclass = the parent class in an inheritance relationship
+      2) Subclass = the child, or derived, class in an inheritance relationship
+          - Example: public class <name> extends <superclass>{ ... }
+      4) You can overide new properties onto exiting properties or values
+      5) Useful methods of Object class
+          - clone(): Creates and returns a copy of the object (not a public method)
+          - equals(obj): Indicates whether the other object is equal to this one
+          - finalize(): called automatically by Java when objects are destoryed (not public)
+          - getClass(): returns information about the type of the object
+          - hashCode(): returns a number associated with the object; used in some collections
+          - toString(): returns the state of the object as a String
+          - notify(), notifyAll(), wait(): advanced methods for multithreaded programming
+      6) Interface = A type that consists of a set of method declarations
+          - When classes promise to implement an interface, you can treat those classes similarly in your code
+          - An interface can represent a common supertype between several classes without code sharing
+          - Contains only method headers without bodies
+          - A few Java's important faces
+              1. ActionaListener - used to assign behaviour to events when a user clicks on a button or other graphical control
+              2. Serializable - denotes classes whose objects may be saved to files and tranferred over a network
+              3. Comparable - allows describing how to compare objects of a type to determine which are less than, greater than, or equal to each other
+                  - This technique can be used to search or sort a collection of objects
+              4. Formattable - lets objects describe different ways that they can be printed by the System.out.printf
+              5. Runnable - useful for multithreading
+              6. List, Set, Map and Iterator in the java.util package - describe data structures that you can use to store collections of objects
+  7. Polymorphism = the ability for the same code to be used with several different types of objects and for the code to behave differently depending on the actual type of object used
+    
+<Object-Oriented Design>
+OOD is modeling a program or system as a collection of cooperating objects, implemented as a set of classes using class hierarchies
+
+  1. Refactoring
+      - changes a program's internal structure without modifying its external behaviour to improve simplicity, readability, maintainability, extensibility, performance, etc
+  2. Abstract class
+      - A Java class that can't be instantiated, but that instaad serves as a superclass to hold common code and declare abstract behaviour
+          - example) public abstract class <name> { ... }   
+      - Abstact classes are allowed to implement interfaces
+      - full example)
+      
+      public abstract class ShareAsset implements Asset{
+          private String symbol;
+          priavte double totalCost;
+          private double currentPrice;
+          
+          public void addCost(double cost){
+            totalCost += cost;
+          }
+      
+          public abstract double getMArketvalue();
+      }

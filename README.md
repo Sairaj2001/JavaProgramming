@@ -12,6 +12,11 @@
 
 ### Why Java
 1. Java is a simple, object-oriented, network-savvy, interpreted, robust, secure, architecture neutral, portable, high-performance, multithreaded, dynamic language
+    1) Object-Oriented Programming is reasoning about a program as a set of objects rather than as a set of actions
+        a. Object is a programming entity that contains state (data) and behaviour (methods)
+            1. It provides reusable pieces of code that can be used in many client programs
+        b. State is a set of values (internal data) stored in an object
+        c. Client (or Client Code) is a code that interacts with a class or objects of that class
 2. Java includes a large amount of prewritten software that programmers  can utilize to enhance their programs - libraries
 3. Java is paltform independent; the same Java program can be executed on manay different OS
 4. Java used extensively for both research and business applications

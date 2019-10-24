@@ -1,0 +1,80 @@
+< Hashing >
+  - Hashing is a technique for efficiently mapping data elements to indexes in an array so that they can be added, removed, and searche very quickly.
+  - Makes O(1) possible for insertion
+  - Typically, O(N) for removal or searching. But, Binary Search may reduce it to O(log N)
+  - Tehcniques
+      1) Hash function
+        - a method for rapidly mapping between element values and preferred array indexes at which to store those values
+          - ex) To insert 23 for array of size 10, 0 to 9, insert at index 3 because 23 % 10 = 3
+      2) Hash tables
+        - An array that stores its elements in indexes produced by a hash function
+        - When full, it can be enlarged to give it additional capacity for storing elements
+      3) Collision
+        - when two or more element values in a hash table produce the same result from its hash function, indicating that they both prefer to be stored in the same index of the table
+        - techniques
+            1. Probing
+              - looks for another index to use if the preferred index is taken
+              - resolves hash collisions by placing elements at other indexes in the table rather than their preferred indexes
+                1) Linear probing - next free index
+                2) Quadratic probing - jumping around to various places in the ahs table
+            2. Separate Chaining
+              - reolsves hash collisions by having each index of the table store a list of values rather than a single value
+            3. Rehashing
+              - resize a hash table to increase its capacity and enabling it to store more elemetns or store them more efficiently
+                - ex) separate chaining
+                
+< Priority Queue >
+  - A collection that associates each added delement with a priority or importance and allows access or removal of the elments in order of priority
+  - Methods
+    1) PriorityQueue<E>()
+    2) PriorityQueue<E>(comparator) - constructs a new empty priority queue, using the given Comparator to order its elements
+    3) add(value)
+    4) clear()
+    5) isEmpty()
+    6) Iterator
+    7) peek() - returns the minimum element in the queue
+    8) remove() - removes and returns the minimum element in the queue; throws a "NoSuchElementException" if queue is empty
+    9) size()
+    10) toArray()
+    11) toString()
+    
+< Heaps >
+  1. A tree that arrages its elements with a vertical ordering
+  2. types
+    1) Min-heap (smaller values closer to the root)
+      - Child nodes always store values greater than or equal to the paren'ts value
+      - PriorityQueue
+    2) Max-heap (larger values closer to the root)
+      - A parent node's value is always greater than or equal to those of its children
+  3. Removing from a Heap by "Bubble (Precolate)"
+    - Moving a heap element upward or downward until the heap's state satisfies the required vertical ordering
+    - Remove-min algorithm pseudo, O(log N)
+        1) Find and remove rightmost leaf node
+        2) Insert leaf's value into root node (previous root node is removed)
+        3) current node = root
+        4) while (current node's value is not smaller than both children){
+          choose smaller of two children
+          //swap current node's value with smaller child value
+          current node = smaller child node
+        }
+  4. Adding to a Heap
+    - Pseudo
+        1) insert new element value as a new rightmost leaf node
+        2) current node = the new leaf node
+        3) while (current node's value is not greater than its parent){
+          //swap current node's value with parent's value
+          current node = parent node
+        }
+  5. Heap Sort
+    - takes advantage of the ordering of heaps to arrange data quickly
+    - Pseudo
+        1) for each element n in A:
+        2)  add n to H
+        3) while (H not empty):
+        4)  remove element from H
+        5)  add element back into A
+      
+      
+      
+      
+      

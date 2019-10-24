@@ -1,0 +1,67 @@
+- ArrayList or LinkedList calls "indexOf(E)" method to sequentially search for the given keyword E
+
+< Binary Search >
+  - Binary Search is an algorihtm that searches fora value in a sorted list by repeatedly diving the search space in half
+  - uses "min","mid", and "max" to determine the split point
+
+< Searching and Sorting in Java's Class Libraries >
+  1. Arrays.binarySearch(array, value)
+    - returns the index of the given value in the given array, assuming that the arary's elemtns are currently in sorted order
+    - returns a negative number if the given value is not found
+  2. Arrays.sort(array)
+    - Arrays.sort(array, String.CASE_INSENTIVE_ORDER): sort anarray of mixed-case strings
+  3. Collections.binarySearch(list, value)
+    - reutnrs the index of the given value in the givne list, assuming that the list's elements are currently in sorted order
+    - returns a negative number if the given value is not found
+  4. Collections.shuffle(list)
+  5. Collections.sort(list)
+  
+< Program Complexity>
+  - Complexity is a measure of the computing resources that are used by a piece of code, such as time, memory, or disk space
+      1. Time complexity = runtime
+          1) Empirical analysis = measure the real runtime of code or a program
+          2) Algorithmi analysis = examine its code or pseudocode and roughly count the number of statements that are executed
+      2. Space complexity = bitwise storage
+
+< Complexity Class >
+  - A set of algorithms that have a similar relationship between input data size and resource consumption
+  - the "big-Oh" notation
+      - examples of the most common complexity classes (slowest to fastest growth or high complexity)
+          1. Constant time, O(1)
+              - algorithm's runtimes don't depend on input size
+          2. Logarithmic, O(log N)
+              - algorithms typically divde a program space in half repeatedly until the problem is solved
+                  - ex) binary search
+                  - ex)
+                      for (int i = 0; i < 10; i = i * 2){ ... }
+          3. Linear, O(N)
+          4. Log-linear, O(N log N)
+              - algorithms typically perform a comination of logarithmic and linear operations
+                  - ex) merge sort
+                  - ex)
+                      for (int i = 0; i < 10; i++){
+                        for (int j = 0; j < 10; j = j * 2){ ... }
+                      }
+          5. Quadratic, O(N^2)
+              - ex)
+                  for (int i = 0; i < 10; i++){
+                    for (int j = 0; j < 10; j++){ ... }
+                  }      
+          6. Cubic, O(N^3)
+          7. Exponential, O(2^N)
+          
+< Sorting >
+  1. Selection sort, O(N^2)
+    - Each time it runs through a loop, it selects the smallest value and puts it in the proper place near the front of the array
+      - ex) int[] nums = {12, 123, 1, 28, 183, 16};
+          1) 1 is selected and swaped with 12, index 1 through 5 to be done
+          2) repeat
+  2. Merge sort, O(log N)
+     1) split the array into two halves
+     2) mergesort the left half
+     3) mergesort the right half
+     4) merge the two halves
+
+
+          
+          

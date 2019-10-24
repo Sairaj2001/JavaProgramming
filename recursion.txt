@@ -1,0 +1,40 @@
+Recursion is a programming technique in which you describe actions to be repeated using a method that calls itself
+
+< Elements >
+    1. Base case
+        - A case within a recursive solutio nthat is so simple that it can be solved directly without a recursive call
+    2. Recurisve case
+        - A case within a recursive solution that invovles reducing the overall problem to a simpler problem of the same kind that can be solved by a recurisve call
+    3. Call Stack
+        - The internal structure thatkeeps track of the sequence of methods that have been called
+    4. Prefix Evaluator
+        1) Infix - <number1> <operator> <number2>
+        2) Prefix - <operator> <number1> <number2>
+            = functional notation
+               - example) + 3.5 8.2 = plus(3.5, 8.2) if represneted with a function
+        3) Postfix - <number1> <number2> <operator>
+            = reverse Polish notation
+    
+        
+- Example 1)
+  public static void writeStars(int n){
+    if (n == 0) {
+      System.out.println();
+    }else{
+      System.out.print("*");
+      writeStarts(n - 1);
+    }
+  }
+
+- Example 2)
+  public static int pow(int x, int y){
+    if (y == 0){
+      // base case with y == 0
+      return 1;
+    }else if (y < 0){
+      throw new IllegalArgumentException("negative exponent: " + y);
+    }else{
+      // recursive case with y > 0
+      return x * pow(x, y - 1);
+    }
+  }

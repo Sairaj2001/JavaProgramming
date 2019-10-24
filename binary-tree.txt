@@ -1,0 +1,15 @@
+< Binary Tree Basics >
+  1. Properties
+    1) An empty tree
+    2) A root node that refers to two other trees - left subtree and right subtree
+  2. LinkedList works well with trees
+  3. Tranversal
+    1) Preorder: [root, left, right]
+    2) Inorder: [left, root, right]
+    3) Postorder: [left, right, root]
+    
+< Binary Tree Search >
+  1. Properties
+     1) left subtree stores values less than or equal to the root data, n
+     2) right subtree stores values that are greater than root data, n
+  2. SearchTree<E> bts = new SearchTree<String>();

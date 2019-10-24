@@ -49,30 +49,32 @@
   3. Removing from a Heap by "Bubble (Precolate)"
     - Moving a heap element upward or downward until the heap's state satisfies the required vertical ordering
     - Remove-min algorithm pseudo, O(log N)
-        1) Find and remove rightmost leaf node
-        2) Insert leaf's value into root node (previous root node is removed)
-        3) current node = root
-        4) while (current node's value is not smaller than both children){
-          choose smaller of two children
-          //swap current node's value with smaller child value
-          current node = smaller child node
-        }
+         Find and remove rightmost leaf node
+         Insert leaf's value into root node (previous root node is removed)
+         current node = root
+         while (current node's value is not smaller than both children){
+            choose smaller of two children
+            //swap current node's value with smaller child value
+            current node = smaller child node
+          }
   4. Adding to a Heap
     - Pseudo
-        1) insert new element value as a new rightmost leaf node
-        2) current node = the new leaf node
-        3) while (current node's value is not greater than its parent){
+        insert new element value as a new rightmost leaf node
+        current node = the new leaf node
+        while (current node's value is not greater than its parent){
           //swap current node's value with parent's value
           current node = parent node
         }
   5. Heap Sort
     - takes advantage of the ordering of heaps to arrange data quickly
     - Pseudo
-        1) for each element n in A:
-        2)  add n to H
-        3) while (H not empty):
-        4)  remove element from H
-        5)  add element back into A
+      heapSort(A):
+        H = create new heap
+        for each element n in A:
+          add n to H
+        while (H not empty):
+          remove element from H
+          add element back into A
       
       
       

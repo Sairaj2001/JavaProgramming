@@ -67,13 +67,13 @@
         }
   5. Heap Sort
     - takes advantage of the ordering of heaps to arrange data quickly
-    - Pseudo
+    - Pseudo (using prioirty queue)
       heapSort(A):
         H = create new heap
         for each element n in A:
           add n to H
         while (H not empty):
-          remove element from H
+          remove element from H //elemetns removed from a prioirty queue will come out in ascending order
           add element back into A
       
       

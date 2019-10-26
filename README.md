@@ -147,3 +147,6 @@ abstact, assert, boolean, break, byte, case, catch, char, class, const, continue
 
 ### 8. Token
 - A single element of input (e.g., one word, one number)
+
+## Java Interview Questions 
+[Top 50+ Core Questions][https://www.softwaretestinghelp.com/core-java-interview-questions/]
